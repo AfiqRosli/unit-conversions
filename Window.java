@@ -134,6 +134,11 @@ class Window extends JFrame {
         String from = String.valueOf(unitFrom.getSelectedItem());
         String to = String.valueOf(unitTo.getSelectedItem());
 
+        if (value.equals("")) {
+            input.setText("0");
+            value = input.getText();
+        }
+
         output.setText(Calculation.convert(value, from, to));
     };
 }
